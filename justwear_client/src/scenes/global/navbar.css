@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Taviraj&display=swap");
+
+
+.navbar {
+  padding: 6px;
+}
+
+.cloth {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1b1212;
+  text-align: center;
+  font-family: "Taviraj", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  padding: 16px;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #2d2b2b;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  width: 50%;
+  /* align-content: center; */
+  justify-content: center;
+}
+
+.my-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 8rem;
+}
+
+.search_items {
+  padding: 15px;
+  outline: none;
+  font-size: 1.02rem;
+}
+
+.iconss {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.search__icons {
+  width: 20px;
+}
+
+.shop__cart {
+  width: 38px;
+}
+
+.user__account {
+  width: 28px;
+}
