@@ -1,68 +1,82 @@
 import "./navbar.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import search from "../assets/search.svg";
-import cart from "../assets/cart.svg";
-import account from "../assets/userr.svg";
+import {
+  SearchOutlined,
+  MenuOutlined,
+  ShoppingBagOutlined,
+  PersonOutline,
+} from "@mui/icons-material";
+import { Box, IconButton, Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 
 function Navbar() {
-  const [clickSearch, setClickSearch] = useState(false);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
 
   return (
-    <div className="navbar">
-      <div className="wrapper">
-        <nav>
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/">Shop</a>
-            </li>
-          </ul>
-        </nav>
-        <div className="clothy-logo">
-          <span className="cloth">justwear</span>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="/">About</a>
-            </li>
-            <li>
-              <a href="/">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div>
-          {clickSearch && (
-            <input
-              type="search"
-              placeholder="Search Products..."
-              className="search_items"
-            />
-          )}
-        </div>
+    <Box
+      display="flex"
+      alignItems="center"
+      width="100%"
+      height="60px"
+      backgroundColor="rgba(255, 255, 255, 0.95)"
+      color="black"
+      top="0"
+      left="0"
+      zIndex="1"
+    >
+      <Box
+        width="80%"
+        margin="auto"
+        display="flex"
+        justify-content="center"
+        alignItems="center"
+        gap="80px"
+      >
+        <Typography variant="h4" sx={{ cursor: "pointer" }}>
+          Mens
+        </Typography>
+        <Typography variant="h4" sx={{ cursor: "pointer" }}>
+          Womens
+        </Typography>
+        <Typography variant="h4" sx={{ cursor: "pointer" }}>
+          Kids
+        </Typography>
+        <Typography variant="h4" sx={{ cursor: "pointer" }}>
+          Sports
+        </Typography>
 
-        <div className="iconss">
-          <div className="search-icon">
-            <img src={search} alt="search" className="search__icons" />
-          </div>
+        <Box
+          onClick={() => navigate("/")}
+          sx={{
+            "&:hover": { cursor: "pointer" },
+            fontFamily: "Taviraj",
+            fontWeight: "900",
+            fontSize: "1.6rem",
+          }}
+        >
+          justwear
+        </Box>
 
-          <div className="my-cart">
-            <img src={cart} alt="cart" className="shop__cart" />
-          </div>
+        <Typography variant="h4" sx={{ cursor: "pointer" }}>
+          About
+        </Typography>
+        <Typography variant="h4" sx={{ cursor: "pointer" }}>
+          Contact
+        </Typography>
 
-          <div className="user-account">
-            <img src={account} alt="user" className="user__account" />
-          </div>
-        </div>
-      </div>
-    </div>
+        <IconButton>
+          <SearchOutlined />
+        </IconButton>
+        <IconButton>
+          <ShoppingBagOutlined />
+        </IconButton>
+        <IconButton>
+          <PersonOutline />
+        </IconButton>
+      </Box>
+    </Box>
   );
 }
 
