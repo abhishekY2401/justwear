@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material";
 
 export const theme = createTheme({
   typography: {
-    fontFamily: ["Fauna One", "sans-serif"].join(","),
+    fontFamily: ["'Unbounded', cursive"].join(","),
     fontSize: 11,
     h1: {
       fontFamily: ["Cinzel", "sans-serif"].join(","),
