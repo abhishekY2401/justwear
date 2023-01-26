@@ -72,12 +72,17 @@ function Navbar() {
           justwear
         </Box>
 
-        <Typography variant="h4" sx={{ cursor: "pointer" }}>
-          About
-        </Typography>
-        <Typography variant="h4" sx={{ cursor: "pointer" }}>
-          Contact
-        </Typography>
+        <Link to="/about">
+          <Typography variant="h4" sx={{ cursor: "pointer" }}>
+            About
+          </Typography>
+        </Link>
+
+        <Link to="/contact">
+          <Typography variant="h4" sx={{ cursor: "pointer" }}>
+            Contact
+          </Typography>
+        </Link>
 
         <IconButton onClick={() => setExpandSearch(true)}>
           <SearchOutlined />
