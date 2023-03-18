@@ -7,9 +7,10 @@ import { CssBaseline } from "@mui/material";
 import { theme } from "./theme";
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./state/index";
+import { ProductReducer } from "./redux/reducers/ProductReducer";
 
 const store = configureStore({
-  reducer: { cart: cartReducer },
+  reducer: { cart: cartReducer, products: ProductReducer },
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
