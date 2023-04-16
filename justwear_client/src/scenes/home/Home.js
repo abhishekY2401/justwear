@@ -11,7 +11,9 @@ import autumn from "../../assets/autumn_home.svg";
 import casual from "../../assets/casual.svg";
 import outfit from "../../assets/women_outfit.svg";
 import { theme } from "../../theme.js";
-import ProductListing from "../product/ProductListing";
+import ProductList from "../product/ProductListing";
+import tshirts from "../../assets/categories/tshirts.webp";
+import Category from "./Category";
 
 const Home = () => {
   const images = [autumn, casual, outfit];
@@ -23,7 +25,6 @@ const Home = () => {
             {images.map((img, i) => (
               <div key={i}>
                 <img src={img} alt="images" style={{ width: "100%" }} />
-                <ButtonBase>Explore More Products</ButtonBase>
               </div>
             ))}
           </Carousel>
@@ -35,19 +36,34 @@ const Home = () => {
               fontSize: "1.5rem",
               letterSpacing: "-0.5px",
               textAlign: "center",
-              marginTop: "50px"
+              marginTop: "50px",
             }}
           >
-            Collections
+            Trending
           </Typography>
+          <ProductList />
         </Container>
-        <Box
+
+        <Typography
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            fontFamily: theme.typography.fontFamily,
+            fontSize: "1.5rem",
+            letterSpacing: "-0.5px",
+            textAlign: "center",
+            marginTop: "50px",
           }}
-        ></Box>
+        >
+          Collections
+        </Typography>
+        <div style={{display: "flex", flexWrap: "wrap", gap: "60px"}}>
+          <Category img={tshirts} item="T-SHIRT" count="20" />
+          <Category img={tshirts} item="T-SHIRT" count="20" />
+          <Category img={tshirts} item="T-SHIRT" count="20" />
+          <Category img={tshirts} item="T-SHIRT" count="20" />
+          <Category img={tshirts} item="T-SHIRT" count="20" />
+          <Category img={tshirts} item="T-SHIRT" count="20" />
+        </div>
+          
       </Container>
     </>
   );

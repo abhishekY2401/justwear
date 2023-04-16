@@ -16,7 +16,7 @@ function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
-  const category = ["mens", "womens", "kids", "sports"];
+  const category = [1,2,3,4];
   const [expandSearch, setExpandSearch] = useState(false);
 
   return (
@@ -39,22 +39,22 @@ function Navbar() {
         alignItems="center"
         gap="80px"
       >
-        <Link to={`/shop/${category[0]}`}>
+        <Link to={`/products/${category[0]}`}>
           <Typography variant="h4" sx={{ cursor: "pointer" }}>
             Mens
           </Typography>
         </Link>
-        <Link to={`/shop/${category[1]}`}>
+        <Link to={`/products/${category[1]}`}>
           <Typography variant="h4" sx={{ cursor: "pointer" }}>
             Womens
           </Typography>
         </Link>
-        <Link to={`/shop/${category[2]}`}>
+        <Link to={`/products/${category[2]}`}>
           <Typography variant="h4" sx={{ cursor: "pointer" }}>
             Kids
           </Typography>
         </Link>
-        <Link to={`/shop/${category[3]}`}>
+        <Link to={`/products/${category[3]}`}>
           <Typography variant="h4" sx={{ cursor: "pointer" }}>
             Sports
           </Typography>
