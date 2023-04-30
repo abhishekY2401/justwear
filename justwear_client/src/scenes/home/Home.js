@@ -12,8 +12,9 @@ import casual from "../../assets/casual.svg";
 import outfit from "../../assets/women_outfit.svg";
 import { theme } from "../../theme.js";
 import ProductList from "../product/ProductListing";
-import tshirts from "../../assets/categories/tshirts.webp";
-import Category from "./Category";
+import tshirts from "../../assets/categories/tshirt_lay.webp";
+import CategoryImg from "./CategoryImg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const images = [autumn, casual, outfit];
@@ -55,13 +56,13 @@ const Home = () => {
         >
           Collections
         </Typography>
-        <div style={{display: "flex", flexWrap: "wrap", gap: "60px"}}>
-          <Category img={tshirts} item="T-SHIRT" count="20" />
-          <Category img={tshirts} item="T-SHIRT" count="20" />
-          <Category img={tshirts} item="T-SHIRT" count="20" />
-          <Category img={tshirts} item="T-SHIRT" count="20" />
-          <Category img={tshirts} item="T-SHIRT" count="20" />
-          <Category img={tshirts} item="T-SHIRT" count="20" />
+        <div style={{display: "flex", flexWrap: "wrap", gap: "40px", justifyContent: "center"}}>
+          <Link to="/category/1"><CategoryImg img={tshirts} item="T-SHIRT" count="20" /></Link>
+          <Link to="/category/2"><CategoryImg img={tshirts} item="T-SHIRT" count="20" /></Link>
+          <Link to="/category/3"><CategoryImg img={tshirts} item="T-SHIRT" count="20" /></Link>
+          <Link to="/category/4"><CategoryImg img={tshirts} item="T-SHIRT" count="20" /></Link>
+          <Link to="/category/5"><CategoryImg img={tshirts} item="T-SHIRT" count="20" /></Link>
+          <Link to="/category/6"><CategoryImg img={tshirts} item="T-SHIRT" count="20" /></Link>
         </div>
           
       </Container>

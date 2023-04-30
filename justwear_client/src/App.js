@@ -11,6 +11,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./scenes/global/Footer";
 import Products from "./scenes/product/Products";
+import Category from "./scenes/home/Category";
 
 
 const ScrollToTop = () => {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/product/:id" element={<ProductDetails />} />  
           <Route path="/products/:id" element={<Products />} />  
+          <Route path="/category/:id" element={<Category />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="checkout/success" element={<Confirmation />} />
         </Routes>
