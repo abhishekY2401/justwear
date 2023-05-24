@@ -16,7 +16,7 @@ function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
-  const category = [1,2,3,4];
+  const category = ["mens", "womens", "kids", "sports"];
   const [expandSearch, setExpandSearch] = useState(false);
 
   return (
