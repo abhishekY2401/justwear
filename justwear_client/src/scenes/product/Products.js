@@ -4,13 +4,13 @@ import ProductList from "../product/ProductListing";
 
 const Products = () => {
 
-  const catId = parseInt(useParams().id)
+  const cartId = parseInt(useParams().id)
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState(null);
 
   return (
-    <div className="products">
-      <div className="left">
+    <div className="products" style={{display: "flex"}}>
+      <div className="left" style={{width: "22%", display: "flex",  "padding-left": "45px", "flex-direction": "column"}}>
         <div className="filterItem">
           <h2>Product Categories</h2>
           <div className="inputItem">
@@ -46,7 +46,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      <div className="right">
+      <div className="right" style={{width: "100%"}}>
         <ProductList/>
       </div>
     </div>
