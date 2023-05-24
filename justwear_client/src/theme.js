@@ -5,12 +5,14 @@ export const theme = createTheme({
     fontFamily: ["'Montserrat', sans-serif"].join(","),
     fontSize: 11,
     h1: {
-      fontFamily: ["Cinzel", "sans-serif"].join(","),
+      fontFamily: ["Taviraj", "sans-serif"].join(","),
       fontSize: 48,
+      fontWeight: 800
     },
     h2: {
-      fontFamily: ["Cinzel", "sans-serif"].join(","),
+      fontFamily: ["Playfair Display", "sans-serif"].join(","),
       fontSize: 36,
+      fontWeight: 500
     },
     h3: {
       fontFamily: ["Cinzel", "sans-serif"].join(","),
